@@ -1,17 +1,23 @@
-## My Project
+# Implement serverless FIFO queues with filtering capabilities using Amazon DynamoDB transactions
 
-TODO: Fill this README out!
 
-Be sure to:
+## Setup instructions
+* `git clone git@github.com:aws-samples/aws-dynamodb-fifo.git`  Clone repository
+* `cd dynamodb-fifo`   cd to scripts directory
+* `pip install -r requirements.txt`   Install dependent packages
 
-* Change the title in this README
-* Edit your repository description on GitHub
+## Create DynamoDB Agent Queue
+`python createTable.py`
 
-## Security
+## Initialize table with agents and queue metadata
+`python initializeAgentPoolAndQueueMetaData.py`
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+## Assign available agents to queue (adding agents to Agent Queue)
+`python addAvailAgentsToQueue.py`
 
-## License
+## Assign agents to callers
+To find the first agent who speaks French and has a male gender.
+`python assignAgentToCallRequest.py Q#French#M`
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+## Cleanup
+`python deleteTable.py`
