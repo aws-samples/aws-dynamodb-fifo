@@ -3,7 +3,7 @@
 
 ## Setup instructions
 * `git clone git@github.com:aws-samples/aws-dynamodb-fifo.git`  Clone repository
-* `cd dynamodb-fifo`   cd to scripts directory
+* `cd aws-dynamodb-fifo`   change directory
 * `pip install -r requirements.txt`   Install dependent packages
 
 ## Create DynamoDB Agent Queue
